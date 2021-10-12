@@ -2,8 +2,7 @@ import requests
 import json
 
 params = {
-    ' collection': 'the-wanderers',
-    'limit': 1
+    ' collection': 'the-wanderers'
 }
 
 r = requests.get("https://api.opensea.io/api/v1/assets", params=params)
