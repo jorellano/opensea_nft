@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import json
+from web3 import Web3
+import pandas as pd
 
 endpoint = st.sidebar.selectbox("Endpoints", ['Assets', 'Events', 'Rarity'])
 st.header(f"OpenSea NFT API Explorer - {endpoint}")
@@ -25,7 +27,7 @@ if endpoint == 'Assets':
     for asset in response["assets"]:
         if asset['name']:
             st.write(asset['name'])
-        else:
+        else=
             st.write(f"{asset['collection']['name']} #{asset['token_id']}")
 
         if asset['image_url'].endswith("mp4") or asset['image_url'].endswith('mov'):
