@@ -1,15 +1,17 @@
-import requests, json, time
+import requests
+import json
+import time
 from web3 import web3
 
 offset = {'assets': []}
 
 while True:
     params = {
-        'collection':'the-wanderers',
-        'order_by':'pk',
-        'order_direction':'asc',
+        'collection': 'the-wanderers',
+        'order_by': 'pk',
+        'order_direction': 'asc',
         'offset': offset,
-        'limit':50
+        'limit': 50
     }
 
     r = requests.get('https://api.opensea.io/api/v1/assets', params=params)
